@@ -33,7 +33,7 @@ const TopPostsCarousel = ({ list }) => {
               { marginRight: index === list.length - 1 ? spacing.l : 0 },
             ]}
             onPress={() => {
-              navigation.navigate(item.category);
+              navigation.navigate('All', item);
             }}
           >
             <View style={[styles.card, shadow.dark]}>

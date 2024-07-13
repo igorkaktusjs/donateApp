@@ -1,0 +1,268 @@
+{
+    "userProfiles": [
+      {
+        "id": 1,
+        "firstName": "John",
+        "lastName": "Doe",
+        "username": "johndoe123",
+        "password": "password123",
+        "avatar": "https://example.com/avatar/johndoe.jpg",
+        "address": {
+          "country": "USA",
+          "city": "New York",
+          "street": "123 Main St",
+          "houseNumber": "Apt 101"
+        },
+        "email": "johndoe@example.com",
+        "phone": "+1 (555) 123-4567",
+        "verified": true,
+        "registrationDate": "2022-04-10",
+        "status": "new",
+        "rating": 4.8,
+        "reviews": [
+          {
+            "id": 1,
+            "userId": 2,
+            "comment": "Great guest, easy to communicate with.",
+            "rating": 5
+          }
+        ],
+        "reviewCount": 1,
+        "wishlist": [
+          {
+            "wishlist_id": 1,
+            "name": "John's Wishlist",
+            "created_at": "2023-01-01T12:00:00Z",
+            "listing_ids": [1, 2]  
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "firstName": "Alice",
+        "lastName": "Smith",
+        "username": "alicesmith456",
+        "password": "p@ssw0rd",
+        "avatar": "https://example.com/avatar/alicesmith.jpg",
+        "address": {
+          "country": "UK",
+          "city": "London",
+          "street": "456 High St",
+          "houseNumber": "Flat 202"
+        },
+        "email": "alicesmith@example.com",
+        "phone": "+44 20 1234 5678",
+        "verified": true,
+        "registrationDate": "2022-05-15",
+        "status": "experienced",
+        "rating": 4.5,
+        "reviews": [
+          {
+            "id": 2,
+            "userId": 1,
+            "comment": "Excellent host, highly recommended.",
+            "rating": 5
+          }
+        ],
+        "reviewCount": 1
+      },
+      {
+        "id": 3,
+        "firstName": "Michael",
+        "lastName": "Johnson",
+        "username": "michaelj85",
+        "password": "mike123",
+        "avatar": "https://example.com/avatar/michaelj.jpg",
+        "address": {
+          "country": "Canada",
+          "city": "Toronto",
+          "street": "789 Maple Ave",
+          "houseNumber": "Unit 301"
+        },
+        "email": "michaelj@example.com",
+        "phone": "+1 (416) 555-7890",
+        "verified": true,
+        "registrationDate": "2022-06-20",
+        "status": "new",
+        "rating": 4.2,
+        "reviews": [],
+        "reviewCount": 0
+      },
+      {
+        "id": 4,
+        "firstName": "Emily",
+        "lastName": "Brown",
+        "username": "emilyb",
+        "password": "brownie",
+        "avatar": "https://example.com/avatar/emilybrown.jpg",
+        "address": {
+          "country": "Australia",
+          "city": "Sydney",
+          "street": "101 Ocean St",
+          "houseNumber": "Apt 501"
+        },
+        "email": "emily@example.com",
+        "phone": "+61 2 9876 5432",
+        "verified": false,
+        "registrationDate": "2022-07-05",
+        "status": "new",
+        "rating": 4.0,
+        "reviews": [],
+        "reviewCount": 0
+      },
+      {
+        "id": 5,
+        "firstName": "David",
+        "lastName": "Lee",
+        "username": "davidlee",
+        "password": "dave123",
+        "avatar": "https://example.com/avatar/davidlee.jpg",
+        "address": {
+          "country": "USA",
+          "city": "Los Angeles",
+          "street": "555 Sunset Blvd",
+          "houseNumber": "Suite 200"
+        },
+        "email": "davidlee@example.com",
+        "phone": "+1 (213) 555-4321",
+        "verified": true,
+        "registrationDate": "2022-08-12",
+        "status": "experienced",
+        "rating": 4.7,
+        "reviews": [
+          {
+            "id": 3,
+            "userId": 6,
+            "comment": "Friendly and respectful guest.",
+            "rating": 4
+          }
+        ],
+        "reviewCount": 1
+      },
+      {
+        "id": 6,
+        "firstName": "Sophia",
+        "lastName": "Garcia",
+        "username": "sophiag",
+        "password": "sophie22",
+        "avatar": "https://example.com/avatar/sophiagarcia.jpg",
+        "address": {
+          "country": "Spain",
+          "city": "Barcelona",
+          "street": "123 Rambla St",
+          "houseNumber": "Floor 5"
+        },
+        "email": "sophia@example.com",
+        "phone": "+34 6 1234 5678",
+        "verified": true,
+        "registrationDate": "2022-09-25",
+        "status": "experienced",
+        "rating": 4.9,
+        "reviews": [
+          {
+            "id": 4,
+            "userId": 5,
+            "comment": "Great host, lovely place.",
+            "rating": 5
+          }
+        ],
+        "reviewCount": 1
+      },
+      {
+        "id": 7,
+        "firstName": "Robert",
+        "lastName": "Taylor",
+        "username": "rtaylor",
+        "password": "robbie55",
+        "avatar": "https://example.com/avatar/rtaylor.jpg",
+        "address": {
+          "country": "Canada",
+          "city": "Vancouver",
+          "street": "789 Granville St",
+          "houseNumber": "Unit 405"
+        },
+        "email": "rtaylor@example.com",
+        "phone": "+1 (604) 123-4567",
+        "verified": true,
+        "registrationDate": "2022-10-10",
+        "status": "new",
+        "rating": 4.3,
+        "reviews": [],
+        "reviewCount": 0
+      },
+      {
+        "id": 8,
+        "firstName": "Emma",
+        "lastName": "Robinson",
+        "username": "emmar",
+        "password": "emma@123",
+        "avatar": "https://example.com/avatar/emmarobinson.jpg",
+        "address": {
+          "country": "UK",
+          "city": "Manchester",
+          "street": "456 Oxford St",
+          "houseNumber": "Flat 301"
+        },
+        "email": "emma@example.com",
+        "phone": "+44 161 234 5678",
+        "verified": false,
+        "registrationDate": "2022-11-15",
+        "status": "new",
+        "rating": 4.1,
+        "reviews": [],
+        "reviewCount": 0
+      },
+      {
+        "id": 9,
+        "firstName": "Daniel",
+        "lastName": "Martinez",
+        "username": "danm",
+        "password": "daniel123",
+        "avatar": "https://example.com/avatar/danmartinez.jpg",
+        "address": {
+          "country": "Spain",
+          "city": "Madrid",
+          "street": "789 Plaza Mayor",
+          "houseNumber": "Floor 3"
+        },
+        "email": "danm@example.com",
+        "phone": "+34 6 9876 5432",
+        "verified": true,
+        "registrationDate": "2022-12-20",
+        "status": "new",
+        "rating": 4.6,
+        "reviews": [],
+        "reviewCount": 0
+      },
+      {
+        "id": 10,
+        "firstName": "Olivia",
+        "lastName": "Miller",
+        "username": "oliviam",
+        "password": "olivia456",
+        "avatar": "https://example.com/avatar/oliviamiller.jpg",
+        "address": {
+          "country": "USA",
+          "city": "Chicago",
+          "street": "101 Michigan Ave",
+          "houseNumber": "Suite 500"
+        },
+        "email": "oliviam@example.com",
+        "phone": "+1 (312) 555-7890",
+        "verified": true,
+        "registrationDate": "2023-01-05",
+        "status": "experienced",
+        "rating": 4.8,
+        "reviews": [
+          {
+            "id": 5,
+            "userId": 6,
+            "comment": "Nice stay, everything as described.",
+            "rating": 4
+          }
+        ],
+        "reviewCount": 1
+      }
+    ]
+  }
+  

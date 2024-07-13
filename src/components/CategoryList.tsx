@@ -18,7 +18,7 @@ const CategoryList = ({ list }) => {
             key={item.id}
             style={styles.cardContainer}
             onPress={() => {
-              navigation.navigate("PostDetails", { post: item });
+              navigation.navigate("SearchPageScreenByCategory", { post: item });
             }}
           >
             <View style={[styles.card, shadow.light]}>

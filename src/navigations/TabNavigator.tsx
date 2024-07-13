@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, View } from "react-native";
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import HomeScreen from "../screens/HomeScreen";
@@ -8,8 +8,10 @@ import InboxScreen from "../screens/InboxScreen";
 import ProfileScreen from "../screens/ProfileScreen";
 import { useNavigation } from "@react-navigation/native";
 
+
 import { MaterialCommunityIcons } from "@expo/vector-icons/";
-import { colors } from "../constants/Colors";
+
+import { colors } from "../constants/theme";
 
 const Tab = createBottomTabNavigator();
 
@@ -23,6 +25,9 @@ const TabNavigator = () => {
         headerShown: false,
         tabBarInactiveTintColor: colors.darkGrey2,
         tabBarActiveTintColor: colors.primaryDark,
+        tabBarStyle: {
+          backgroundColor: colors.tinyBrown
+        }
       }}
     >
       <Tab.Screen
@@ -68,11 +73,13 @@ const TabNavigator = () => {
         name="Повідомлення"
         component={InboxScreen}
         options={{
+          headerTransparent: true,
           tabBarIcon: ({ focused }) => (
             <MaterialCommunityIcons
               name="chat-outline"
               size={28}
               color={focused ? colors.redDark : colors.darkGrey2}
+              
             />
           ),
         }}

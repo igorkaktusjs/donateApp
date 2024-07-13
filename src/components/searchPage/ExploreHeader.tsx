@@ -6,29 +6,42 @@ import {
   TouchableOpacity,
   ScrollView,
 } from "react-native";
-import React, { useRef, useState } from "react";
-import { CATEGOTY } from "../../data/index";
+import React, { useRef, useState, useEffect } from "react";
+import { CATEGORY } from "../../data/index";
 import { colors, sizes, shadow, spacing } from "../../constants/theme";
-import { Link } from "@react-navigation/native";
 import { useNavigation } from "@react-navigation/native";
-import Icon from "../Icon";
 import { Ionicons } from "@expo/vector-icons";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import * as Haptics from "expo-haptics";
-
-// interface Props {
-//     onCategoryChanged: (category: string) => void
-// }
+import { useAppDispatch, useAppSelector } from "../../../hook";
+import { getCategory, selectedFilter} from "../../../store/filtersSlice"; 
 
 const ExploreHeader = () => {
+
+  const dispatch = useAppDispatch();
+   
+  useEffect(() => {
+    dispatch(getCategory())
+  },[]) 
+
+  const filters = useAppSelector((state) => state.filters);
+  const currentFilter = useAppSelector((state) => state.currentFilter);
+
   const navigation = useNavigation();
   const scrollRef = useRef<ScrollView>(null);
   const itemsRef = useRef<Array<TouchableOpacity | null>>([]);
-  const [activeIndex, setActiveIndex] = useState(0);
 
-  const selectCategory = (index: number) => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [current, setCurrent] = useState('');
+
+  useEffect(() => {
+    dispatch(selectedFilter(current));
+    },[current])
+
+  const selectCategory = (index: number, item ) => {
     const selected = itemsRef.current[index];
     setActiveIndex(index);
+    setCurrent(item);
 
     selected?.measure((x) => {
       scrollRef.current?.scrollTo({ x: x, y: 0, animated: true });
@@ -36,7 +49,7 @@ const ExploreHeader = () => {
 
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
   };
-
+  
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: colors.lightBrown }}>
       <View style={styles.container}>
@@ -53,7 +66,7 @@ const ExploreHeader = () => {
             <TouchableOpacity
               style={[styles.searchBtn, shadow.dark]}
               onPress={() => {
-                navigation.navigate("SearchResults");
+                navigation.navigate('SearchResults');
               }}
             >
               <MaterialCommunityIcons
@@ -88,9 +101,10 @@ const ExploreHeader = () => {
             paddingHorizontal: spacing.s - 10,
           }}
         >
-          {CATEGOTY.map((item, index) => (
+
+          {CATEGORY.map((item: any, index: number) => (
             <TouchableOpacity
-              onPress={() => selectCategory(index)}
+              onPress={() => selectCategory(index, item.sleg)}
               key={item.id}
               ref={(el) => (itemsRef.current[index] = el)}
               style={

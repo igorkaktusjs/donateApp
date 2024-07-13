@@ -2,7 +2,12 @@ import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { colors } from '../constants/theme';
 
-const PostDetailsScreen = ({navigation, route}) => {
+import { useSelector, useDispatch } from 'react-redux'
+
+
+const SearchPageScreenByCategory = ({navigation, route}) => {
+
+
     const { post } = route.params;  
   return (
     <View style={styles.container}>
@@ -12,7 +17,7 @@ const PostDetailsScreen = ({navigation, route}) => {
   )
 }
 
-export default PostDetailsScreen
+export default SearchPageScreenByCategory;
 
 const styles = StyleSheet.create({
     container: {
